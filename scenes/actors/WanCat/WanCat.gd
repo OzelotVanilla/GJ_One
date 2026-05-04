@@ -1,0 +1,2 @@
+class_name WanCat
+extends CharacterBody2D

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://5kb3nm2uyd4c"]
+
+[ext_resource type="Script" uid="uid://bxn36cf3ogwio" path="res://scenes/actors/WanCat/WanCat.gd" id="1_pcl5l"]
+[ext_resource type="Texture2D" uid="uid://cq3u6863g3rhs" path="res://assets/vector_graphics/white_square.svg" id="2_jqjpt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcl5l"]
+
+[node name="WanCat" type="CharacterBody2D" unique_id=393667721]
+script = ExtResource("1_pcl5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1029200188]
+modulate = Color(0.87058824, 0.7921569, 0.99607843, 1)
+scale = Vector2(0.19881341, 0.19856182)
+texture = ExtResource("2_jqjpt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1180136221]
+shape = SubResource("RectangleShape2D_pcl5l")
