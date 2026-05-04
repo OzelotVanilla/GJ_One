@@ -24,7 +24,7 @@ func _ready() -> void:
     if self.isRunningInDebugMode():
         if self.is_relaunched_by_debug_runner:
             return
- 
+
         # Should redirect to debug runner.
         print(self.scene_file_path)
         self.launchAgainByDebugRunner()
