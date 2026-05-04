@@ -2,12 +2,7 @@ class_name DebugRunner
 extends Node2D
 
 
-const wancat__scene := preload("res://scenes/actors/WanCat/WanCat.tscn")
-
-
 var level: BaseLevel
-
-var wancat_player: WanCat
 
 
 func _ready() -> void:
@@ -39,7 +34,5 @@ func consumePathOfSceneToDebug() -> String:
 
 func startLevel(level_scene: PackedScene) -> void:
     self.level = level_scene.instantiate()
-    self.add_child(level)
-
-    self.wancat_player = DebugRunner.wancat__scene.instantiate()
-    self.add_child(wancat_player)
+    self.level.is_relaunched_by_debug_runner = true
+    self.add_child(self.level)
