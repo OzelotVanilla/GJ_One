@@ -10,8 +10,11 @@ script = ExtResource("1_pcl5l")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1029200188]
 modulate = Color(0.87058824, 0.7921569, 0.99607843, 1)
-scale = Vector2(0.19881341, 0.19856182)
+scale = Vector2(0.7636003, 0.7626339)
 texture = ExtResource("2_jqjpt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1180136221]
+scale = Vector2(3.7647634, 3.7647634)
 shape = SubResource("RectangleShape2D_pcl5l")
+
+[node name="EffectextContainer" type="Node2D" parent="." unique_id=12072683]

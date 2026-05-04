@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c6ddxjmqxrwdd"]
+
+[ext_resource type="Script" uid="uid://bqmix0e24rsg7" path="res://scenes/effects/BarkWave/BarkWave.gd" id="1_awi0m"]
+
+[node name="BarkWave" type="Area2D" unique_id=1368411417 groups=["bark_wave"]]
+script = ExtResource("1_awi0m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1235194504]
+polygon = PackedVector2Array(-52, -148, -27, -82, -16, 0, -27, 82, -52, 148, 12, 110, 50, 40, 60, 0, 50, -40, 12, -110)
+
+[node name="ColourBg" type="Polygon2D" parent="." unique_id=1534035439]
+modulate = Color(0.63529414, 0.34117648, 0.40784314, 1)
