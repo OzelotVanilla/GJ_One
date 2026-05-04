@@ -19,6 +19,8 @@ var propagation__time_limit: float = 0.5
 @export var propagation__fade_threashold := 0.8
 
 
+var ability: String
+
 
 @onready var collision_polygon_2d: CollisionPolygon2D = $CollisionPolygon2D
 

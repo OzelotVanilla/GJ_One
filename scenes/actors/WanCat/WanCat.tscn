@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cq3u6863g3rhs" path="res://assets/vector_graphics/white_square.svg" id="2_jqjpt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcl5l"]
+size = Vector2(76.36003, 76.26339)
 
 [node name="WanCat" type="CharacterBody2D" unique_id=393667721]
 script = ExtResource("1_pcl5l")
@@ -18,3 +19,12 @@ scale = Vector2(3.7647634, 3.7647634)
 shape = SubResource("RectangleShape2D_pcl5l")
 
 [node name="EffectextContainer" type="Node2D" parent="." unique_id=12072683]
+
+[node name="BarkAbilityLabel" type="Label" parent="." unique_id=1070272876]
+offset_left = -38.180016
+offset_top = -38.131695
+offset_right = 38.180016
+offset_bottom = 38.131695
+text = "NONE"
+horizontal_alignment = 1
+vertical_alignment = 1
