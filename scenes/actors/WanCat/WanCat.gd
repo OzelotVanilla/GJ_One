@@ -75,6 +75,8 @@ func bark():
 func syncSize():
     var size := self.sprite.get_rect().size * self.sprite.scale.abs()
 
+    self.collision_shape.scale = Vector2.ONE
+
     var collision_rect := self.collision_shape.shape as RectangleShape2D
     if collision_rect != null:
         collision_rect.size = size

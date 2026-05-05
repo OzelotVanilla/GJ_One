@@ -11,7 +11,9 @@ signal bark_received(bark: BarkWave)
 
 @onready var label: Label = $Label
 
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var collision_shape: CollisionShape2D = $StaticBody2D/CollisionShape2D
+
+var area_shape_owner_id := -1
 
 
 ## Size of button
@@ -55,6 +57,8 @@ func applySize() -> void:
     if collision_rect != null:
         collision_rect.size = self.size
 
+    self.syncAreaCollisionShape()
+
     self.queue_redraw()
 
 func applyFontSize() -> void:
@@ -68,6 +72,23 @@ func applyFontSize() -> void:
 func on_area_entered(area: Area2D):
     if area is BarkWave:
         self.bark_received.emit(area)
+
+func syncAreaCollisionShape() -> void:
+    if not self.is_node_ready():
+        return
+
+    if self.area_shape_owner_id < 0:
+        self.area_shape_owner_id = self.create_shape_owner(self.collision_shape)
+
+    self.shape_owner_clear_shapes(self.area_shape_owner_id)
+    self.shape_owner_set_transform(
+        self.area_shape_owner_id,
+        self.collision_shape.transform
+    )
+    self.shape_owner_add_shape(
+        self.area_shape_owner_id,
+        self.collision_shape.shape
+    )
 
 ## Connected from self [signal input_event].
 func on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

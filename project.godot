@@ -79,8 +79,9 @@ ability_next={
 
 [layer_names]
 
-2d_physics/layer_1="player"
+2d_physics/layer_1="world_object"
 2d_physics/layer_2="bark_target"
+2d_physics/layer_3="player"
 
 [physics]
 
