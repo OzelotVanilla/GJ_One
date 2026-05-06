@@ -9,7 +9,7 @@ script = ExtResource("1_bp38w")
 [node name="Button" parent="." unique_id=1381938187 instance=ExtResource("2_aeqcc")]
 position = Vector2(640, 360)
 size = Vector2(384, 144)
-text = "QUIT"
+text = "TEXT"
 font_size = 66
 
 [connection signal="bark_received" from="Button" to="." method="on_Button_bark_received"]

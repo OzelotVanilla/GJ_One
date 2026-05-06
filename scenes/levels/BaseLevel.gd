@@ -22,13 +22,11 @@ var is_relaunched_by_debug_runner: bool = false
 
 func _ready() -> void:
     if self.isRunningInDebugMode():
-        if self.is_relaunched_by_debug_runner:
+        if not self.is_relaunched_by_debug_runner:
+            # Should redirect to debug runner.
+            print(self.scene_file_path)
+            self.launchAgainByDebugRunner()
             return
-
-        # Should redirect to debug runner.
-        print(self.scene_file_path)
-        self.launchAgainByDebugRunner()
-        return
 
     self.__onReady__()
 
