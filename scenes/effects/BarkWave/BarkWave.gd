@@ -19,6 +19,9 @@ var propagation__time_limit: float = 0.5
 @export var propagation__fade_threashold := 0.8
 
 
+## After how long time should this wave start to check collision.
+var collision_check__time_threshold: float = 0
+
 var ability: String
 
 
@@ -84,11 +87,17 @@ func updateWaveVisuals():
 
 ## This is called when any part of the wave touches the target body/area.
 func notifyBarkWaveEntered(node: Node2D):
+    if self.time_existed < self.collision_check__time_threshold:
+        return
+
     if node.has_method("on_BarkWave_enterted"):
         node.on_BarkWave_enterted(self)
 
 ## This is called when the core area of the wave touches a body/area.
 func notifyBarkWaveReceived(node: Node2D):
+    if self.time_existed < self.collision_check__time_threshold:
+        return
+
     if node.has_method("on_BarkWave_received"):
         node.on_BarkWave_received(self)
 

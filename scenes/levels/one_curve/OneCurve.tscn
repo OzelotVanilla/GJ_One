@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bl8rs877af7ga"]
+
+[ext_resource type="Script" uid="uid://ymw2drcyk77a" path="res://scenes/levels/one_curve/OneCurve.gd" id="1_hni70"]
+[ext_resource type="PackedScene" uid="uid://c6o8xend75kc8" path="res://scenes/entities/Mirror/Mirror.tscn" id="2_2vc2n"]
+[ext_resource type="PackedScene" uid="uid://virqqx77x7c0" path="res://scenes/entities/AirWall/AirWall.tscn" id="2_mo7lv"]
+[ext_resource type="PackedScene" uid="uid://bc3l84jdsgd21" path="res://scenes/entities/WinTile/WinTile.tscn" id="3_mo7lv"]
+
+[node name="OneCurve" type="Node2D" unique_id=1586259961]
+script = ExtResource("1_hni70")
+
+[node name="WallContainer" type="Node2D" parent="." unique_id=1106510281]
+
+[node name="AirWall" parent="WallContainer" unique_id=780942850 instance=ExtResource("2_mo7lv")]
+position = Vector2(417, 361)
+
+[node name="AirWall2" parent="WallContainer" unique_id=299000244 instance=ExtResource("2_mo7lv")]
+position = Vector2(341, 361)
+
+[node name="AirWall3" parent="WallContainer" unique_id=1855733884 instance=ExtResource("2_mo7lv")]
+position = Vector2(341, 437)
+
+[node name="AirWall4" parent="WallContainer" unique_id=326751489 instance=ExtResource("2_mo7lv")]
+position = Vector2(341, 513)
+
+[node name="AirWall5" parent="WallContainer" unique_id=290998948 instance=ExtResource("2_mo7lv")]
+position = Vector2(417, 513)
+
+[node name="AirWall6" parent="WallContainer" unique_id=884466644 instance=ExtResource("2_mo7lv")]
+position = Vector2(493, 513)
+
+[node name="AirWall7" parent="WallContainer" unique_id=2143125236 instance=ExtResource("2_mo7lv")]
+position = Vector2(493, 437)
+
+[node name="AirWall8" parent="WallContainer" unique_id=1455307107 instance=ExtResource("2_mo7lv")]
+position = Vector2(493, 361)
+
+[node name="MirrorContainer" type="Node2D" parent="." unique_id=351711919]
+
+[node name="Mirror1" parent="MirrorContainer" unique_id=1760544939 instance=ExtResource("2_2vc2n")]
+position = Vector2(630, 456)
+rotation = -1.5707964
+
+[node name="Mirror2" parent="MirrorContainer" unique_id=642479808 instance=ExtResource("2_2vc2n")]
+position = Vector2(569.00006, 222.00002)
+rotation = 2.3561945
+
+[node name="WanCatSpawnPosition" type="Marker2D" parent="." unique_id=348370160]
+position = Vector2(417, 439)
+
+[node name="WinTile" parent="." unique_id=32757302 instance=ExtResource("3_mo7lv")]
+position = Vector2(852, 247)

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c6o8xend75kc8"]
+
+[ext_resource type="Script" uid="uid://41ivygnupiqw" path="res://scenes/entities/Mirror/Mirror.gd" id="1_7rfjl"]
+[ext_resource type="Texture2D" uid="uid://upli5sgbllyu" path="res://assets/vector_graphics/white_rt_triangle_with_perp_line_inside.svg" id="2_soijx"]
+[ext_resource type="Script" uid="uid://1s0llri1ksks" path="res://scenes/entities/MirrorReflectionArea.gd" id="3_3gqvq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soijx"]
+size = Vector2(100, 5)
+
+[node name="Mirror" type="RigidBody2D" unique_id=1760544939]
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_7rfjl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647006799]
+modulate = Color(0.6862745, 0.6862745, 0.6901961, 1)
+scale = Vector2(0.764, 0.764)
+texture = ExtResource("2_soijx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1204109575]
+scale = Vector2(0.764, 0.764)
+polygon = PackedVector2Array(-50, -50, 50, -50, 0, 0)
+
+[node name="ReflectionArea" type="Area2D" parent="." unique_id=2138965681]
+script = ExtResource("3_3gqvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ReflectionArea" unique_id=578600420]
+position = Vector2(0, -38.2)
+scale = Vector2(0.764, 0.764)
+shape = SubResource("RectangleShape2D_soijx")
+
+[node name="CenterMarker" type="Marker2D" parent="ReflectionArea" unique_id=303080103]
+position = Vector2(0, -53.48)
