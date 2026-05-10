@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dosnj6uujsepk"]
+
+[ext_resource type="Script" uid="uid://u8he0j633hml" path="res://scenes/entities/Wall/Wall.gd" id="1_bly27"]
+[ext_resource type="Texture2D" uid="uid://cq3u6863g3rhs" path="res://assets/vector_graphics/white_square.svg" id="2_q4f4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bly27"]
+size = Vector2(76.4, 76.4)
+
+[node name="Wall" type="StaticBody2D" unique_id=1943266569 groups=["wall"]]
+script = ExtResource("1_bly27")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=76932963]
+modulate = Color(0.40784314, 0.3372549, 0.25490198, 1)
+scale = Vector2(0.764, 0.764)
+texture = ExtResource("2_q4f4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1862143204]
+shape = SubResource("RectangleShape2D_bly27")
+
+[node name="Debug" type="Node2D" parent="." unique_id=1569471545]
+
+[node name="NameLabel" type="Label" parent="Debug" unique_id=1010882445]
+offset_left = -38.2
+offset_top = -38.2
+offset_right = 38.2
+offset_bottom = 38.2
+text = "wall"
+horizontal_alignment = 1
+vertical_alignment = 1
