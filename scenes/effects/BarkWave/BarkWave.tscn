@@ -2,11 +2,23 @@
 
 [ext_resource type="Script" uid="uid://bqmix0e24rsg7" path="res://scenes/effects/BarkWave/BarkWave.gd" id="1_awi0m"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_awi0m"]
+
 [node name="BarkWave" type="Area2D" unique_id=1368411417 groups=["bark_wave"]]
 script = ExtResource("1_awi0m")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1235194504]
-polygon = PackedVector2Array(-52, -148, -27, -82, -16, 0, -27, 82, -52, 148, 12, 110, 50, 40, 60, 0, 50, -40, 12, -110)
+polygon = PackedVector2Array(-72, -148, -47, -82, -36, 0, -47, 82, -72, 148, -8, 110, 30, 40, 40, 0, 30, -40, -8, -110)
 
 [node name="ColourBg" type="Polygon2D" parent="." unique_id=1534035439]
 modulate = Color(0.63529414, 0.34117648, 0.40784314, 1)
+
+[node name="Core" type="Area2D" parent="." unique_id=1632967449]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Core" unique_id=77267519]
+shape = SubResource("CircleShape2D_awi0m")
+
+[connection signal="area_entered" from="." to="." method="notifyBarkWaveEntered"]
+[connection signal="body_entered" from="." to="." method="notifyBarkWaveEntered"]
+[connection signal="area_entered" from="Core" to="." method="notifyBarkWaveReceived"]
+[connection signal="body_entered" from="Core" to="." method="notifyBarkWaveReceived"]

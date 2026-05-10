@@ -82,6 +82,16 @@ func updateWaveVisuals():
 
     self.queue_redraw()
 
+## This is called when any part of the wave touches the target body/area.
+func notifyBarkWaveEntered(node: Node2D):
+    if node.has_method("on_BarkWave_enterted"):
+        node.on_BarkWave_enterted(self)
+
+## This is called when the core area of the wave touches a body/area.
+func notifyBarkWaveReceived(node: Node2D):
+    if node.has_method("on_BarkWave_received"):
+        node.on_BarkWave_received(self)
+
 func __onReady__():
     self.initial_polygon = self.collision_polygon_2d.polygon
     self.updateWaveShape()
