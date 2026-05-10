@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bc3l84jdsgd21"]
+
+[ext_resource type="Script" uid="uid://bcpnhp1uel4u3" path="res://scenes/entities/WinBlock/WinTile.gd" id="1_wox62"]
+[ext_resource type="Texture2D" uid="uid://cq3u6863g3rhs" path="res://assets/vector_graphics/white_square.svg" id="2_vqscp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvv3"]
+size = Vector2(76.4, 76.4)
+
+[node name="WinTile" type="Area2D" unique_id=32757302]
+modulate = Color(0.9882353, 0.78431374, 0, 1)
+script = ExtResource("1_wox62")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=528213660]
+scale = Vector2(0.764, 0.764)
+texture = ExtResource("2_vqscp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=22192016]
+shape = SubResource("RectangleShape2D_xfvv3")
+
+[node name="Debug" type="Node2D" parent="." unique_id=1856509179]
+
+[node name="NameLabel" type="Label" parent="Debug" unique_id=1545050013]
+offset_left = -38.2
+offset_top = -38.2
+offset_right = 38.2
+offset_bottom = 38.2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]
