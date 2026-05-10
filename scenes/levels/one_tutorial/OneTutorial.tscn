@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dtnny2wwuyuj3" path="res://scenes/levels/one_tutorial/OneTutorial.gd" id="1_0co3w"]
 [ext_resource type="PackedScene" uid="uid://dosnj6uujsepk" path="res://scenes/entities/Wall/Wall.tscn" id="2_ca75q"]
 [ext_resource type="PackedScene" uid="uid://virqqx77x7c0" path="res://scenes/entities/AirWall/AirWall.tscn" id="3_b354f"]
-[ext_resource type="PackedScene" uid="uid://bc3l84jdsgd21" path="res://scenes/entities/WinBlock/WinTile.tscn" id="4_df8tg"]
+[ext_resource type="PackedScene" uid="uid://bc3l84jdsgd21" path="res://scenes/entities/WinTile/WinTile.tscn" id="4_df8tg"]
 
 [node name="OneTutorial" type="Node2D" unique_id=419411211]
 script = ExtResource("1_0co3w")
@@ -40,7 +40,7 @@ position = Vector2(532, 520)
 [node name="Wall10" parent="WallContainer" unique_id=1834839873 instance=ExtResource("2_ca75q")]
 position = Vector2(608, 520)
 
-[node name="AirWall" parent="WallContainer" unique_id=780942850 instance=ExtResource("3_b354f")]
+[node name="AirWall1" parent="WallContainer" unique_id=780942850 instance=ExtResource("3_b354f")]
 position = Vector2(608, 368)
 
 [node name="AirWall2" parent="WallContainer" unique_id=1261906062 instance=ExtResource("3_b354f")]

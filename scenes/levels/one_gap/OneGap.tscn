@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bhf2wf6k2j5ts" path="res://scenes/levels/one_gap/OneGap.gd" id="1_vor66"]
 [ext_resource type="PackedScene" uid="uid://dosnj6uujsepk" path="res://scenes/entities/Wall/Wall.tscn" id="2_cl4lo"]
 [ext_resource type="PackedScene" uid="uid://virqqx77x7c0" path="res://scenes/entities/AirWall/AirWall.tscn" id="3_d8cx8"]
-[ext_resource type="PackedScene" uid="uid://bc3l84jdsgd21" path="res://scenes/entities/WinBlock/WinTile.tscn" id="4_owcv0"]
+[ext_resource type="PackedScene" uid="uid://bc3l84jdsgd21" path="res://scenes/entities/WinTile/WinTile.tscn" id="4_owcv0"]
 
 [node name="OneGap" type="Node2D" unique_id=1655377195]
 script = ExtResource("1_vor66")
