@@ -20,7 +20,15 @@ var bark_offset: int = 20
 
 var speed: float = self.init_speed
 
-var facing_direction: Vector2 = Vector2.ZERO
+var facing_direction: Vector2 = Vector2.ZERO:
+    set(new_direction):
+        if new_direction == facing_direction or new_direction == Vector2.ZERO:
+            return
+
+        facing_direction = new_direction
+
+        if self.debug__direction_hint.is_node_ready():
+            self.debug__direction_hint.rotation = Vector2.UP.angle_to(new_direction)
 
 var last_bark__timestamp := -self.bark_cooldown_secs
 
@@ -43,6 +51,8 @@ var current_selected_ability: String:
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 @onready var bark_ability_label: Label = $BarkAbilityLabel
+
+@onready var debug__direction_hint: Sprite2D = $Debug/DirectionHint
 
 
 func _physics_process(delta: float) -> void: self.__onPhysicsProcess__(delta)
