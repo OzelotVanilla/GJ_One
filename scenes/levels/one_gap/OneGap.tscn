@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://b7hgmx1vafacb"]
+
+[ext_resource type="Script" uid="uid://bhf2wf6k2j5ts" path="res://scenes/levels/one_gap/OneGap.gd" id="1_vor66"]
+[ext_resource type="PackedScene" uid="uid://dosnj6uujsepk" path="res://scenes/entities/Wall/Wall.tscn" id="2_cl4lo"]
+[ext_resource type="PackedScene" uid="uid://virqqx77x7c0" path="res://scenes/entities/AirWall/AirWall.tscn" id="3_d8cx8"]
+[ext_resource type="PackedScene" uid="uid://bc3l84jdsgd21" path="res://scenes/entities/WinBlock/WinTile.tscn" id="4_owcv0"]
+
+[node name="OneGap" type="Node2D" unique_id=1655377195]
+script = ExtResource("1_vor66")
+
+[node name="WallContainer" type="Node2D" parent="." unique_id=56904327]
+
+[node name="Wall1" parent="WallContainer" unique_id=1943266569 instance=ExtResource("2_cl4lo")]
+position = Vector2(436, 281)
+
+[node name="Wall2" parent="WallContainer" unique_id=1721195340 instance=ExtResource("2_cl4lo")]
+position = Vector2(512, 281)
+
+[node name="Wall3" parent="WallContainer" unique_id=385048279 instance=ExtResource("2_cl4lo")]
+position = Vector2(588, 281)
+
+[node name="Wall4" parent="WallContainer" unique_id=875317829 instance=ExtResource("2_cl4lo")]
+position = Vector2(664, 281)
+
+[node name="Wall5" parent="WallContainer" unique_id=135910595 instance=ExtResource("2_cl4lo")]
+position = Vector2(436, 357)
+
+[node name="Wall6" parent="WallContainer" unique_id=326925203 instance=ExtResource("2_cl4lo")]
+position = Vector2(436, 433)
+
+[node name="Wall7" parent="WallContainer" unique_id=518677708 instance=ExtResource("2_cl4lo")]
+position = Vector2(436, 509)
+
+[node name="Wall8" parent="WallContainer" unique_id=2107204056 instance=ExtResource("2_cl4lo")]
+position = Vector2(436, 585)
+
+[node name="Wall9" parent="WallContainer" unique_id=240757015 instance=ExtResource("2_cl4lo")]
+position = Vector2(512, 585)
+
+[node name="Wall10" parent="WallContainer" unique_id=57394718 instance=ExtResource("2_cl4lo")]
+position = Vector2(588, 585)
+
+[node name="Wall11" parent="WallContainer" unique_id=229524435 instance=ExtResource("2_cl4lo")]
+position = Vector2(664, 585)
+
+[node name="Wall12" parent="WallContainer" unique_id=414867780 instance=ExtResource("2_cl4lo")]
+position = Vector2(740, 585)
+
+[node name="Wall13" parent="WallContainer" unique_id=1917841464 instance=ExtResource("2_cl4lo")]
+position = Vector2(815, 585)
+
+[node name="Wall14" parent="WallContainer" unique_id=167215323 instance=ExtResource("2_cl4lo")]
+position = Vector2(815, 508)
+
+[node name="Wall15" parent="WallContainer" unique_id=617529755 instance=ExtResource("2_cl4lo")]
+position = Vector2(815, 432)
+
+[node name="Wall16" parent="WallContainer" unique_id=872336306 instance=ExtResource("2_cl4lo")]
+position = Vector2(815, 356)
+
+[node name="Wall17" parent="WallContainer" unique_id=495660925 instance=ExtResource("2_cl4lo")]
+position = Vector2(815, 281)
+
+[node name="Wall18" parent="WallContainer" unique_id=232731321 instance=ExtResource("2_cl4lo")]
+position = Vector2(739, 281)
+
+[node name="AirWall1" parent="WallContainer" unique_id=780942850 instance=ExtResource("3_d8cx8")]
+position = Vector2(664, 357)
+
+[node name="AirWall2" parent="WallContainer" unique_id=1681473326 instance=ExtResource("3_d8cx8")]
+position = Vector2(664, 433)
+
+[node name="AirWall3" parent="WallContainer" unique_id=885096854 instance=ExtResource("3_d8cx8")]
+position = Vector2(664, 509)
+
+[node name="WanCatSpawnPosition" type="Marker2D" parent="." unique_id=838937005]
+position = Vector2(550, 432)
+
+[node name="WinTile" parent="." unique_id=32757302 instance=ExtResource("4_owcv0")]
+position = Vector2(740, 357)
+
+[node name="TutorialTextLabel" type="Label" parent="." unique_id=1302176930]
+offset_left = 485.0
+offset_top = 136.0
+offset_right = 767.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "You can bark diagonally."
+horizontal_alignment = 1

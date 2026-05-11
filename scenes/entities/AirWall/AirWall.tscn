@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://virqqx77x7c0"]
+
+[ext_resource type="Script" uid="uid://ciuhqxshp3y5g" path="res://scenes/entities/AirWall/AirWall.gd" id="1_mtwak"]
+[ext_resource type="Texture2D" uid="uid://bbmf7hw110ew0" path="res://assets/vector_graphics/white_square_with_cross_inside.svg" id="2_vbfc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqqby"]
+size = Vector2(100, 100)
+
+[node name="AirWall" type="StaticBody2D" unique_id=780942850]
+script = ExtResource("1_mtwak")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2069129877]
+modulate = Color(0.63529414, 0.84313726, 0.8666667, 1)
+scale = Vector2(0.764, 0.764)
+texture = ExtResource("2_vbfc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497542543]
+shape = SubResource("RectangleShape2D_xqqby")
+
+[node name="Debug" type="Node2D" parent="." unique_id=1262632306]
+
+[node name="NameLabel" type="Label" parent="Debug" unique_id=1051102285]
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0

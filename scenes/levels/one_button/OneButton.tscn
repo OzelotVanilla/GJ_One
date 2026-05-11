@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dic0utl746fps"]
+
+[ext_resource type="Script" uid="uid://b86j1wny7wmyk" path="res://scenes/levels/one_button/OneButton.gd" id="1_bp38w"]
+[ext_resource type="PackedScene" uid="uid://cim3lbcm7kk32" path="res://scenes/entities/BarkToChangeButton/BarkToChangeButton.tscn" id="2_aeqcc"]
+
+[node name="OneButton" type="Node2D" unique_id=2124919646]
+script = ExtResource("1_bp38w")
+
+[node name="Button" parent="." unique_id=1381938187 instance=ExtResource("2_aeqcc")]
+position = Vector2(640, 360)
+size = Vector2(384, 144)
+text = "TEXT"
+font_size = 66
+
+[connection signal="bark_received" from="Button" to="." method="on_Button_bark_received"]

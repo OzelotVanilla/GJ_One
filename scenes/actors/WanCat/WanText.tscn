@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b83jl172lavmr"]
+
+[ext_resource type="Script" uid="uid://buvyajbem1qle" path="res://scenes/actors/WanCat/WanText.gd" id="1_grgnv"]
+[ext_resource type="Texture2D" uid="uid://c80vgke0h4s4f" path="res://assets/texts/bark_EN.svg" id="2_ty2r3"]
+[ext_resource type="Texture2D" uid="uid://8b7etx7m1bb4" path="res://assets/texts/bark_JP.svg" id="3_no4ip"]
+
+[node name="WanText" type="Node2D" unique_id=1918786920]
+script = ExtResource("1_grgnv")
+
+[node name="EN" type="Sprite2D" parent="." unique_id=205294092]
+texture = ExtResource("2_ty2r3")
+
+[node name="JP" type="Sprite2D" parent="." unique_id=1738428898]
+visible = false
+texture = ExtResource("3_no4ip")

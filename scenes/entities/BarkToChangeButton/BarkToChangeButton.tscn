@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cim3lbcm7kk32"]
+
+[ext_resource type="Script" uid="uid://bdvythi6e17h" path="res://scenes/entities/BarkToChangeButton/BarkToChangeButton.gd" id="1_bl0ec"]
+[ext_resource type="FontFile" uid="uid://nu5krul6465e" path="res://assets/fonts/ark-pixel-12px-monospaced-latin.otf" id="2_2is3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2is3w"]
+size = Vector2(128, 48)
+
+[node name="BarkToChangeButton" type="Area2D" unique_id=1381938187]
+collision_mask = 7
+script = ExtResource("1_bl0ec")
+
+[node name="Label" type="Label" parent="." unique_id=1099813050]
+offset_left = -64.0
+offset_top = -24.0
+offset_right = 64.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2is3w")
+theme_override_font_sizes/font_size = 16
+text = "BUTTON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1963559028]
+shape = SubResource("RectangleShape2D_2is3w")
+
+[connection signal="area_entered" from="." to="." method="on_area_entered"]
+[connection signal="input_event" from="." to="." method="on_input_event"]
