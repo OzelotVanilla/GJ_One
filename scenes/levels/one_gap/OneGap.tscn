@@ -11,10 +11,10 @@ script = ExtResource("1_vor66")
 [node name="WallContainer" type="Node2D" parent="." unique_id=56904327]
 
 [node name="Wall1" parent="WallContainer" unique_id=1943266569 instance=ExtResource("2_cl4lo")]
-position = Vector2(436, 281)
+position = Vector2(361, 281)
 
 [node name="Wall2" parent="WallContainer" unique_id=1721195340 instance=ExtResource("2_cl4lo")]
-position = Vector2(512, 281)
+position = Vector2(437, 281)
 
 [node name="Wall3" parent="WallContainer" unique_id=385048279 instance=ExtResource("2_cl4lo")]
 position = Vector2(588, 281)
@@ -23,19 +23,19 @@ position = Vector2(588, 281)
 position = Vector2(664, 281)
 
 [node name="Wall5" parent="WallContainer" unique_id=135910595 instance=ExtResource("2_cl4lo")]
-position = Vector2(436, 357)
+position = Vector2(361, 357)
 
 [node name="Wall6" parent="WallContainer" unique_id=326925203 instance=ExtResource("2_cl4lo")]
-position = Vector2(436, 433)
+position = Vector2(361, 433)
 
 [node name="Wall7" parent="WallContainer" unique_id=518677708 instance=ExtResource("2_cl4lo")]
-position = Vector2(436, 509)
+position = Vector2(361, 509)
 
 [node name="Wall8" parent="WallContainer" unique_id=2107204056 instance=ExtResource("2_cl4lo")]
-position = Vector2(436, 585)
+position = Vector2(361, 585)
 
 [node name="Wall9" parent="WallContainer" unique_id=240757015 instance=ExtResource("2_cl4lo")]
-position = Vector2(512, 585)
+position = Vector2(437, 585)
 
 [node name="Wall10" parent="WallContainer" unique_id=57394718 instance=ExtResource("2_cl4lo")]
 position = Vector2(588, 585)
@@ -63,6 +63,18 @@ position = Vector2(815, 281)
 
 [node name="Wall18" parent="WallContainer" unique_id=232731321 instance=ExtResource("2_cl4lo")]
 position = Vector2(739, 281)
+
+[node name="Wall19" parent="WallContainer" unique_id=1846767427 instance=ExtResource("2_cl4lo")]
+position = Vector2(561, 357)
+
+[node name="Wall20" parent="WallContainer" unique_id=1989611688 instance=ExtResource("2_cl4lo")]
+position = Vector2(561, 432)
+
+[node name="Wall21" parent="WallContainer" unique_id=1482034259 instance=ExtResource("2_cl4lo")]
+position = Vector2(512, 281)
+
+[node name="Wall22" parent="WallContainer" unique_id=1310234618 instance=ExtResource("2_cl4lo")]
+position = Vector2(513, 585)
 
 [node name="AirWall1" parent="WallContainer" unique_id=780942850 instance=ExtResource("3_d8cx8")]
 position = Vector2(664, 357)
